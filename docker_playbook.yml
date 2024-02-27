@@ -1,6 +1,6 @@
 ---
 - name: Example Docker Playbook
-  hosts: all
+  hosts: localhost
   remote_user: ubuntu
 
   tasks:
