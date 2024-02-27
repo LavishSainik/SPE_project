@@ -2,7 +2,8 @@
 - name: Example Docker Playbook
   hosts: localhost
   remote_user: ubuntu
-
+  vars:
+    ansible_python_interpreter: /home/ubuntu/.local/lib/python3.10/site-packages
   tasks:
     - name: Add user to Docker group
       user:
