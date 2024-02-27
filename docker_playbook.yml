@@ -1,6 +1,11 @@
 - name: docker build and push
   hosts: localhost
   tasks:
+    - name: Add user to Docker group
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
     - name: Build Docker Image
       command: docker build -t calculator.jar .
 
