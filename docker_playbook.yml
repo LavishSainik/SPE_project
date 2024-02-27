@@ -1,5 +1,6 @@
-- name: docker build and push
-  hosts: localhost
+- name: Example Docker Playbook
+  hosts: all
+  hosts: ./
   tasks:
     - name: Add user to Docker group
       user:
